@@ -31,7 +31,7 @@ function setup() {
     ball.y = ball.y + ball.speedY;
     if ( ( ( (ball.y - ball.radius)) <= 0)||((ball.y + ball.radius)>=height)) ball.speedY *= -1; //hit top or bottom
     
-    if (((ball.x + ball.radius) >= paddles.paddle2.pX) && ( ((ball.y + ball.radius) >= paddles.paddle2.pY)&&((ball.y - ball.radius) <= (paddles.paddle2.pY + paddles.paddle2.pHeight)) ) ) ball.speedX *= -1;//hit right paddle
+    if (((ball.x + ball.radius) >= paddles.paddle2.pX) && ((ball.y + ball.radius) >= paddles.paddle2.pY)) && ((ball.y - ball.radius) <= (paddles.paddle2.pY + paddles.paddle2.pHeight)) ) ball.speedX *= -1;//hit right paddle
     
     if () //hit left paddle
     
