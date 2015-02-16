@@ -13,8 +13,8 @@ function setup() {
   ball.x = width/2;
   ball.y = height/2;
   ball.diameter = 20;
-  ball.speedX = 1;
-  ball.speedY = 1;
+  ball.speedX = random(-3,3);
+  ball.speedY = random(-3,3);
   ball.draw = function (){ellipse(ball.x, ball.y, ball.diameter, ball.diameter);};
   
   paddle.draw = function () {rect(this.pX, this.pY, this.pWidth, this.pHeight)};
