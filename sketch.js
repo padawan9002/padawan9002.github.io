@@ -32,7 +32,7 @@ function draw() {
 
   if (keyIsDown(DOWN_ARROW))paddles.paddle2.pY = paddles.paddle2.pY + paddles.paddle2.speed ;
 
-  clear();
+  //clear();
 
 }
 
