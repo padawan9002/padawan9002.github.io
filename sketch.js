@@ -1,7 +1,7 @@
 var ball = {};
 var paddle = {speed: 10, pWidth: 10, pHeight: 50, pX:0, pY: 0};
 var paddles = {};
-var A_KEY = 65;
+var A_KEY = 65;  // http://api.jquery.com/event.which/
 var Z_KEY = 90;
 
 
