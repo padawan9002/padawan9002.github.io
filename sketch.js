@@ -1,14 +1,18 @@
-var x = 0;
+var ball = {};
 
 function setup() {
   // put setup code here
   createCanvas(640, 480);
+  ball.x = width/2;
+  ball.y = height/2;
+  ball.diameter = 20;
 }
 
 function draw() {
   // put drawing code here
-  ellipse(x, height/2, 20, 20);
-  x = x + 1;
+  ellipse(ball.x, ball.y, ball.diameter, ball.diameter);
+  ball.x += 1;
+  ball.y += 1;
 }
 
 //Thanks http://lauren-mccarthy.com/about/
