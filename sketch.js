@@ -39,7 +39,13 @@ function setup() {
       ((ball.y - ball.radius) <= (paddles.paddle2.pY + paddles.paddle2.pHeight))
       ) ball.speedX *= -1;//hit right paddle
     
-   // if () //hit left paddle
+    if (
+      ((ball.x - ball.radius) <= (paddles.paddle1.pX + paddles.paddle1.pWidth))
+      && 
+      ((ball.y + ball.radius) >= paddles.paddle1.pY)
+      && 
+      ((ball.y - ball.radius) <= (paddles.paddle1.pY + paddles.paddle1.pHeight))
+      ) ball.speedX *= -1;//hit left paddle
     
   };
 }
