@@ -24,13 +24,20 @@ function setup() {
   paddles.paddle1.pX = paddles.paddle1.pWallDistance;
   paddles.paddle2.pX = width - paddles.paddle2.pWidth - paddles.paddle2.pWallDistance;
   paddles.draw = function (){paddles.paddle1.draw();paddles.paddle2.draw()};
+  
+  ball.move = function(){
+    ball.x = ball.x + ball.speedX; 
+    ball.y = ball.y + ball.speedY;
+    if (((ball.y - ball.diameter) <= 0)||((ball.y + ball.diameter)>=height)) ball.speedY *= -1; //hit top or bottom
+    
+    if () //hit left paddle
+    if () //hit right paddle
+
+  };
 }
 
 function draw() {
   // put drawing code here
-
-  ball.x = ball.x + ball.speedX;
-  ball.y = ball.y + ball.speedY;
   
   if (keyIsDown(A_KEY)) paddles.paddle1.pY = paddles.paddle1.pY - paddles.paddle1.speed ;
   if (keyIsDown(Z_KEY)) paddles.paddle1.pY = paddles.paddle1.pY + paddles.paddle1.speed ;
@@ -38,6 +45,8 @@ function draw() {
   if (keyIsDown(UP_ARROW))    paddles.paddle2.pY = paddles.paddle2.pY - paddles.paddle2.speed ;
   if (keyIsDown(DOWN_ARROW))  paddles.paddle2.pY = paddles.paddle2.pY + paddles.paddle2.speed ;
 
+  ball.move();
+    
   clear();
   ball.draw();
   paddles.draw();
