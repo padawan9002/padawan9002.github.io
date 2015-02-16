@@ -1,5 +1,5 @@
 var ball = {};
-var paddle = {speed: 10, pWidth: 10, pHeight: 50, pX:0, pY: 0};
+var paddle = {speed: 10, pWidth: 10, pHeight: 50, pX:0, pY: 0, pWallDistance: 5};
 var paddles = {};
 var A_KEY = 65;  // http://api.jquery.com/event.which/
 var Z_KEY = 90;
@@ -18,9 +18,11 @@ function setup() {
   ball.draw = function (){ellipse(ball.x, ball.y, ball.diameter, ball.diameter);};
   
   paddle.draw = function () {rect(this.pX, this.pY, this.pWidth, this.pHeight)};
+  paddle.pY = height/2;
   paddles.paddle1 = Object.create(paddle);
   paddles.paddle2 = Object.create(paddle);
-  paddles.paddle2.pX = width - paddles.paddle2.pWidth;
+  paddles.paddle1.pX = paddles.paddle1.pWallDistance;
+  paddles.paddle2.pX = width - paddles.paddle2.pWidth - paddles.paddle2.pWallDistance;
   paddles.draw = function (){paddles.paddle1.draw();paddles.paddle2.draw()};
 }
 
