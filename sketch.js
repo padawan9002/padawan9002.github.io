@@ -13,6 +13,7 @@ function setup() {
   ball.x = width/2;
   ball.y = height/2;
   ball.diameter = 20;
+  ball.radius = ball.diameter/2;
   ball.speedX = random(-3,3);
   ball.speedY = random(-3,3);
   ball.draw = function (){ellipse(ball.x, ball.y, ball.diameter, ball.diameter);};
@@ -28,11 +29,12 @@ function setup() {
   ball.move = function(){
     ball.x = ball.x + ball.speedX; 
     ball.y = ball.y + ball.speedY;
-    if (((ball.y - ball.diameter) <= 0)||((ball.y + ball.diameter)>=height)) ball.speedY *= -1; //hit top or bottom
+    if (((ball.y - ball.radius)) <= 0)||((ball.y + ball.radius)>=height)) ball.speedY *= -1; //hit top or bottom
+    
+    if (((ball.x + ball.radius) >= paddles.paddle2.pX) && ( ((ball.y + ball.radius) >= paddles.paddle2.pY)&&((ball.y - ball.radius) <= (paddles.paddle2.pY + paddles.paddle2.pHeight)) ) ) ball.speedX *= -1;//hit right paddle
     
     if () //hit left paddle
-    if () //hit right paddle
-
+    
   };
 }
 
