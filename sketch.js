@@ -27,8 +27,13 @@ function draw() {
   paddles.draw();
   ball.x = ball.x + ball.speedX;
   ball.y = ball.y + ball.speedY;
-  paddles.paddle1.pX +=1;
-  paddles.paddle2.pY +=1;
+  
+  if (keyIsDown(UP_ARROW)) paddles.paddle2.pY = paddles.paddle2.pY - paddles.paddle2.speed ;
+
+  if (keyIsDown(DOWN_ARROW))paddles.paddle2.pY = paddles.paddle2.pY + paddles.paddle2.speed ;
+
+  clear();
+
 }
 
 //Thanks http://lauren-mccarthy.com/about/
