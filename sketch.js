@@ -27,8 +27,8 @@ function draw() {
   ball.x = ball.x + ball.speedX;
   ball.y = ball.y + ball.speedY;
   
-  if (keyIsDown(a)) paddles.paddle1.pY = paddles.paddle1.pY - paddles.paddle1.speed ;
-  if (keyIsDown(z)) paddles.paddle1.pY = paddles.paddle1.pY + paddles.paddle1.speed ;
+  if (keyIsDown(A)) paddles.paddle1.pY = paddles.paddle1.pY - paddles.paddle1.speed ;
+  if (keyIsDown(Z)) paddles.paddle1.pY = paddles.paddle1.pY + paddles.paddle1.speed ;
   
   if (keyIsDown(UP_ARROW))    paddles.paddle2.pY = paddles.paddle2.pY - paddles.paddle2.speed ;
   if (keyIsDown(DOWN_ARROW))  paddles.paddle2.pY = paddles.paddle2.pY + paddles.paddle2.speed ;
